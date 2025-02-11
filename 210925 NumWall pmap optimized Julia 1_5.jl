@@ -85,7 +85,7 @@ function main()
         end
     end
 
-    outfile = "/Users/andreasrichard/OneDrive/01JupyterandCo/01Julia/01Output/Liste.txt"
+    outfile = "./01Julia/01Output/Liste.txt"
     open(outfile, "w") do f
         for p in eachindex(D)
             println(f,"Nr:", p, "\t", D[p])

@@ -12,6 +12,8 @@ Einfacher Algorithmus für n prim.
 ### Pi parallel
 Parallele Approximation mit Rieman Integral. ineffizient. Fokus ist auf dem VErgliceh der sequenziellen und parallelen Ausführung. Mehr Infos im Code.
 
-#### Tournesol interaktiv
-Meine obligate Implementation einer interaktiven Sonnenblumenblüte.
+### Tournesol
+Meine obligate Implementation einer Sonnenblumenblüte.  Mit Julia nicht interaktiv.
 
+### Primzahlen modulo
+Vergleich der Anzahl Primzahlen kongruent 1 und 3 modulo 4, Grafikausgabe mit Plots.jl
