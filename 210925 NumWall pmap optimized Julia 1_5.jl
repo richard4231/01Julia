@@ -19,9 +19,9 @@ using Distributed
 
     function countDigit(x)
         i=0
-        a=x%10 #ev/10
-        b=(x.-a)%100 #ev b=((x.-a)%100)./10
-        c=(x.-a.-b)%1000 #ev c=((x.-a.-b.*10)%100)./100
+        a=x%10 
+        b=(x.-a)%100 
+        c=(x.-a.-b)%1000 
         d=(x.-a.-b.-c)%10000;
         b=b./10;c=c./100;d=d./1000
             if a==5 i=i.+1 end
@@ -32,7 +32,7 @@ using Distributed
     end
 
     function checkNumberwall(first_base_stone)
-        MIN_NUM_FIVES = 12 # Mindestanzahl Fünfen, die berücksichtigt werden soll.
+        MIN_NUM_FIVES = 18 # Mindestanzahl Fünfen, die berücksichtigt werden soll.
         A = [0, 0, 0, 0, 0]
         upper_bound = 999 # Obergrenze der eingesetzten Zahlen. Für Testzwecke < 999.
         a = first_base_stone
@@ -94,23 +94,3 @@ function main()
 end
 
 @time main()
-
-#=
-15208.097797 seconds (877.20 k allocations: 45.241 MiB, 0.00% gc time)
-1:999 iMac über alle 8 Kerne: 4h 15min
-Effizienzsteigerung zur ersten Version um 700%
-
-s>15; iMac, 21.09.21; d in min:upper_bound
-12.560751 seconds (2.51 M allocations: 134.288 MiB, 0.23% gc time)
-Halbierung der Zeit...
-
-s>=19; iMac, 21.09.21; d in min:upper_bound
-7249.890675 seconds (3.00 M allocations: 170.508 MiB, 0.00% gc time)
-1:999 iMac über alle 8 Kerne: 2h 0min 50s
-Halbierung der Zeit... etwas mehr Speicher
-
-s>= 18; macMini, 20.04.24
-4742.512309 seconds (875.07 k allocations: 58.063 MiB, 0.00% gc time, 0.01% compilation time)
-1:999 4 Kerne: 4742.5: 1h 19 Minuten 2 Sekunden
-
-=#
