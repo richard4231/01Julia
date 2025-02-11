@@ -9,4 +9,9 @@ Liste
 Versuche?
 Einfacher Algorithmus für n prim.
 
+### Pi parallel
+Parallele Approximation mit Rieman Integral. ineffizient. Fokus ist auf dem VErgliceh der sequenziellen und parallelen Ausführung. Mehr Infos im Code.
+
+#### Tournesol interaktiv
+Meine obligate Implementation einer interaktiven Sonnenblumenblüte.
 

@@ -54,7 +54,7 @@ function main()
     A = pmap(NumberWalls.checkNumberwall,range_first_basestone)
 
     C = Int[]
-    for i in 1:length(A)
+    for i in eachindex(A)
         if length(A[i]) > 5
             for j in 2:(Int(length(A[i])/5))
                 B = Int[]
@@ -66,8 +66,8 @@ function main()
         end
     end
 
-    for l in 1:(length(C)-1)
-        for m in (l+1):length(C)
+    for l in eachindex(C)[1:end-1]
+        for m in (l+1):lastindex(C)
             if C[l][1] == C[m][1]
                 if C[l][2]==C[m][5] && C[l][3]==C[m][4] && C[l][4]==C[m][3]
                     for n in 1:5
@@ -79,7 +79,7 @@ function main()
     end
 
     D = []
-    for o in 1:length(C)
+    for o in eachindex(C)
         if C[o][1]> 0
             D = vcat(D,[C[o]])
         end
@@ -87,7 +87,7 @@ function main()
 
     outfile = "/Users/andreasrichard/OneDrive/01JupyterandCo/01Julia/01Output/Liste.txt"
     open(outfile, "w") do f
-        for p in 1:length(D)
+        for p in eachindex(D)
             println(f,"Nr:", p, "\t", D[p])
         end
     end
